@@ -1,0 +1,82 @@
+body{
+margin:0; padding:0; border:0;
+background-image:url('../img/backgroundPaper.jpg');
+}
+
+
+#Heading {
+position:block;
+
+width : 100%;
+margin-top:0.8%;
+margin-left:0;
+
+}
+
+#FormBox{
+
+float: right;
+background:rgba(214,0,107,1);
+width: 350px;
+height:180px;
+margin-top:30px;
+font-size:120%;
+font-family:'Courier New',Courier,monospace;
+
+
+transition:opacity 2s;  
+
+}
+
+#FormBox:hover{ 
+    cursor:pointer; 
+    background:rgba(0,0,0,1);
+}
+
+#Paint{
+
+margin-top:30px;
+float: right;
+clear:both;
+width: 350px;
+height:150px;
+
+bottom:0;
+
+}
+
+#PaintBucket{
+height : 67%;
+}
+
+#DropCanvas{
+width: 1450px;
+height:1000px;
+}
+
+#drops{
+position:absolute;
+width: 20%;
+transition:opacity 10s;  
+opacity:0;
+filter: hue-rotate(0deg);
+	-webkit-filter: hue-rotate(0deg);
+	-moz-filter: hue-rotate(0deg);
+	-o-filter: hue-rotate(0deg);
+	-ms-filter: hue-rotate(0deg);
+top:200;
+left:200;
+}
+
+#WhatToDo{
+position:absolute;
+z-index:99;
+top:20%;
+left:20%;
+text-transform:uppercase;
+color:#FFFFFF;
+font-size:120%;
+font-family:"Courier New", Lucida, Console;
+font-weight:900;
+opacity:0.6;
+}
