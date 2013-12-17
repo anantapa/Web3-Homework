@@ -14,7 +14,7 @@ window.addEventListener('resize', function() {
 	sW = window.innerWidth;
 	var imgSeq = parseInt(map_range(sW, 200, 1440, 0, 24));
 	$('#explode').css({
-		'background-image': 'url(\'../portfolio/img/' + imgSeq + '.png\')'
+		'background-image': 'url(\'../ShareQuotes/img/' + imgSeq + '.png\')'
 	});
 	
 	//$('#feed p').html(imgSeq);
@@ -148,6 +148,39 @@ function storePosts(posts){
     localStorage.posts = posts;
 
 }
+
+
+function loadPosts(){
+
+    // check for posts in storage
+    if (localStorage.posts) { 
+
+        posts = localStorage.posts;
+
+        // turn string into an array
+        posts = JSON.parse(posts);
+
+        // loop thru items in the array
+        for( i=0, count=posts.length; i<count; i++ ){
+
+            var post = posts[i]
+            console.log( post );
+            /* displayPost(post); */
+        }
+    } else { // nothing in storage?
+    
+        posts = []; 
+    
+    }
+
+}
+
+// load posts on page load
+loadPosts();
+
+
+
+
 
 var app = {
     load : function(){
